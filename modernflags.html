@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Modern Flags - Data Visualization</title>
+  <meta name="description" content="Modern Flags - Data Visualization">
+  <meta name="author" content="Cristobal Valenzuela">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/flat-ui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+
+</head>
+
+<body id="app">
+   
+    <!-- Space -->
+    <div class="container">
+        <div class="row">
+            <div style="height:50px;">
+            </div>
+        </div>
+    </div>
+    <!-- Space -->
+    
+    <!-- Intro -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3" style="height:150px;">
+                <p class="description"><span style="font-size:18px;">Flag </span><i style="font-size:13px;">/flaɡ/-n:</i> a piece of cloth or similar material, typically oblong or square, attachable by one edge to a pole or rope and used as the symbol or emblem of a country.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Intro -->
+    
+    <!-- UI -->
+    <div class="container" id="selectCountry">
+        <div class="row ">
+           <div class="col-xs-3 ">
+            </div>
+            <!-- Country Dropdown -->
+            <div class="col-xs-2 text-right">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Country <span class="caret"></span></button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Country Dropdown -->
+            
+            <!-- Visualize Button -->
+            <div class="col-xs-1 text-left ">
+                <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off"> Generate
+                </button>
+            </div>
+            <!-- Visualize Button -->
+            
+            <!-- Visualize Button -->
+            <div class="col-xs-1 text-center" style="margin:5px 0 0 20px;">
+                <p>-or-</p>
+            </div>
+            <!-- Visualize Button -->
+            
+            <!-- Visualize Button -->
+            <div class="col-xs-2 text-left">
+                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"> Random
+                </button>
+            </div>
+            <!-- Visualize Button -->
+            
+        </div>
+    </div>
+    <!-- UI -->
+    
+    <!-- JS Canvas -->
+    <div id="canvas" class="canvasFlags">
+        <p class="giniTop">Most Equal</p>
+        <p class="giniBottom">Most Inequal</p>
+    </div>  
+    <!-- JS Canvas -->
+    
+    
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>A project by <span>Cristóbal Valenzuela</span><br>
+            Using Data from the <span><a href="http://data.un.org/">DataUN</a></span></p>
+    </div>
+    <!-- Copyright -->
+    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+    <script src="js/flags.js"></script>
+    <!-- Scripts -->
+
+</body>
+</html>
