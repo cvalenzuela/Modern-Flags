@@ -1,6 +1,6 @@
 
 function setup(){
-    canvas = createCanvas(300, windowHeight);
+    canvas = createCanvas(200, windowHeight);
     canvas.parent('canvas');
     noStroke();
     

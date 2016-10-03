@@ -11,7 +11,8 @@ a{
 }
 
 #home{
-  background-image: url("../img/worldmap.png");
+    background-image: url("../img/worldmap.png");
+    background-size: contain;
 }
 
 #app{
@@ -20,22 +21,22 @@ a{
 #title{
     text-align: center;
     position: relative;
-    top:30em;
+    top:20em;
     color: #34495e;
 }
 
 
 h1{
-    font-size: 3em;
+    font-size: 1em;
 }
 
 p{
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 300; 
 }
 
 .intro{    
-    font-size: 1.2em;
+    font-size: 0.9em;
     color: #3498db;
     margin-bottom: 20px;
     
@@ -50,17 +51,16 @@ p{
 .canvasFlags{
     position: absolute;
     bottom: -10px;
-    left:45%;
-    style="text-align:center;"
-    
+    left:0;    
 }
 
 .copyright>p{
     font-family: 'Lora', serif;
     position: absolute;
+    text-align: right;
     bottom: 10px;
-    right: 30px;
-    font-size: 15px;
+    right: 20px;
+    font-size: 9px;
     font-weight: 300;
     color: #2c3e50;
 }
@@ -75,23 +75,24 @@ p>span{
     border-radius: 1px;
 }
 
-.giniBottom{
-    position: absolute;
-    bottom: 2%;
-    left:-170%
-}
-
-.giniTop{
-    position: absolute;
-    top:-3%;
-    left:-160%;
-}
-
 .description{
     font-family: 'Lora', serif;
     color:black;
 }
 
 
+.buttons {
+    font-size: 9px !important;
+}
 
+.indexTitle {
+    font-size: 30px;
+}
 
+li>a{
+    font-size:9px;
+}
+
+.btn {
+    padding: 8px 10px;
+}
