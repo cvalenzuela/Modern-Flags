@@ -65,6 +65,10 @@ p{
     color: #2c3e50;
 }
 
+span{
+    
+}
+
 p>span{
     text-decoration:underline;
     margin: 2px;
@@ -89,4 +93,9 @@ p>span{
 .description{
     font-family: 'Lora', serif;
     color:black;
+}
+
+
+#countryDescription {
+    padding: 2.0em 0 0 0;
 }
