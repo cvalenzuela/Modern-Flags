@@ -1,0 +1,37 @@
+{
+  "Norway": {
+    "hdi": 0.944,
+    "gini": 26.8,
+    "population": 5211
+  },
+  "Australia": {
+    "hdi": 0.935,
+    "gini": 34,
+    "population": 8545
+  },
+  "Switzerland": {
+    "hdi": 0.93,
+    "gini": 32.4,
+    "population": 8299
+  },
+  "Denmark": {
+    "hdi": 0.923,
+    "gini": 26.9,
+    "population": 5669
+  },
+  "China": {
+    "hdi": 0.727,
+    "gini": 37,
+    "population": 1376049
+  },
+  "Usa": {
+    "hdi": 0.915,
+    "gini": 41.1,
+    "population": 321774
+  },
+  "Niger": {
+    "hdi": 0.348,
+    "gini": 31.2,
+    "population": 19899
+  }
+}
