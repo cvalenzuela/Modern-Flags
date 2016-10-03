@@ -1,3 +1,12 @@
+:root{
+    --animationDurationOne:5s;
+    --animationDurationTwo:3s;
+    --delayOne:1s;
+    --delayTwo:6s;
+    --delayThree:8s;
+    --delayFour:12s;
+}
+
 body,h1,p{
     margin: 0px;
     padding: 0px;
@@ -30,6 +39,11 @@ h1{
     font-size: 1em;
 }
 
+h5{
+    font-family: 'Lora', serif;
+    font-size:11px;
+}
+
 p{
   font-size: 10px;
   font-weight: 300; 
@@ -52,14 +66,27 @@ p{
     position: absolute;
     bottom: -10px;
     left:0;    
+    -webkit-animation-duration: var(--animationDurationOne);
+    -webkit-animation-delay: var(--delayTwo);
+    -moz-animation-duration: var(--animationDurationOne);
+    -moz-animation-delay: var(--delayTwo);
+}
+
+.copyright{
+    -webkit-animation-duration: var(--animationDurationOne);
+    -webkit-animation-delay: var(--delayFour);
+    -moz-animation-duration: var(--animationDurationOne);
+    -moz-animation-delay: var(--delayFour);
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
 }
 
 .copyright>p{
     font-family: 'Lora', serif;
-    position: absolute;
+    
     text-align: right;
-    bottom: 10px;
-    right: 20px;
+
     font-size: 9px;
     font-weight: 300;
     color: #2c3e50;
@@ -78,6 +105,10 @@ p>span{
 .description{
     font-family: 'Lora', serif;
     color:black;
+    -webkit-animation-duration: var(--animationDurationOne);
+    -webkit-animation-delay: var(--delayOne);
+    -moz-animation-duration: var(--animationDurationOne);
+    -moz-animation-delay: var(--delayOne);
 }
 
 
@@ -96,3 +127,22 @@ li>a{
 .btn {
     padding: 8px 10px;
 }
+
+#indexDescription {
+    position: absolute;
+    top:0;
+    left:0%;
+    top:40%;
+    max-width: 250px;
+}
+
+.leftInfoBox{
+    background: #DADFE1;
+    padding: 20px 10px 20px 30px;
+}
+
+#selectCountry {
+    -webkit-animation-duration: var(--animationDurationTwo);
+    -webkit-animation-delay: var(--delayThree);
+    -moz-animation-duration: var(--animationDurationTwo);
+    -moz-animation-delay: var(--delayThree);
