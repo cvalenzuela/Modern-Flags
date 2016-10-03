@@ -1,12 +1,24 @@
 var data, countryDescriptionTag, countryGiniTag, countryHdiTag, countryPopulationTag, countryName, selectedCountry, previousCountry,hdiLowest,hdiHighiest, giniLowest, giniHighiest, countryHdi, countryGini, countryPopulation;
 
- /* ---- Look for selected country in ul>li  ---- */
+ /* ---- Look for selected country in ul>li or for Random Value in JSON ---- */
 if (document.addEventListener){
     document.addEventListener("click", function(event){
         if(event.target.nodeName == "A"){
             if(event.target.innerText != "Country"){
                 selectedCountry = event.target.innerText || event.srcElement.innerText;
+                console.log(selectedCountry);
             }
+        }
+        else if(event.target.innerText == "Random"){
+            var list = []
+            for (var key in data) {
+                
+                if (data.hasOwnProperty(key)){
+                    list.push(key);
+                }
+                
+            }
+            selectedCountry = list[int(random(int(list.length)))];
         }
     });
 }
@@ -42,7 +54,7 @@ function setup(){
 
 function draw() {
     
-    // Check if the country selected is valid
+    /* ---- Check if the country selected is valid---- */
     if(selectedCountry != undefined && previousCountry != selectedCountry){
         
         /* ---- Remove previous country ---- */
