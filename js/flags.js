@@ -1,4 +1,4 @@
-var data, countryDescriptionTag, countryGiniTag, countryHdiTag, countryPopulationTag, countryName, selectedCountry, previousCountry,hdiLowest,hdiHighiest, giniLowest, giniHighiest, countryHdi, countryGini, countryPopulation;
+var data, countryDescriptionTag, countryGiniTag, countryHdiTag, countryPopulationTag, countryName, selectedCountry, previousCountry,hdiLowest,hdiHighiest, giniLowest, giniHighiest, countryHdi, countryGini, countryPopulation, flagPoleY;
 
  /* ---- Look for selected country in ul>li or for Random Value in JSON ---- */
 if (document.addEventListener){
@@ -10,13 +10,12 @@ if (document.addEventListener){
             }
         }
         else if(event.target.innerText == "Random"){
+            // Loop through all Objects in Json, store them in an array and randomly pick one
             var list = []
             for (var key in data) {
-                
                 if (data.hasOwnProperty(key)){
                     list.push(key);
                 }
-                
             }
             selectedCountry = list[int(random(int(list.length)))];
         }
@@ -29,7 +28,8 @@ function preload(){
 }
 
 function setup(){
-    canvas = createCanvas(170, 700);
+    canvas = createCanvas(windowWidth, windowHeight/2+100)
+    //canvas = createCanvas(170, 700);
     canvas.parent('canvas');
     noStroke();
     
@@ -65,7 +65,7 @@ function draw() {
         
         /* ---- Create new country ---- */
         countryName = createElement('h6', selectedCountry); 
-        countryHdi = createElement('p', '<b>HDI:</b> ' + data[selectedCountry].hdi);
+        countryHdi = createElement('p', '<b>Human Development Index:</b> ' + data[selectedCountry].hdi);
         countryGini = createElement('p', '<b>Gini Coefficient:</b> ' + data[selectedCountry].gini);
         countryPopulation = createElement('p', '<b>Population:</b> ' + data[selectedCountry].population + '000');
         
@@ -76,20 +76,24 @@ function draw() {
         countryPopulation.parent(countryPopulationTag);
 
         /* ---- Create new variables to draw  ---- */
-        var hdi = map(data[selectedCountry].hdi,hdiLowest,hdiHighiest,0,windowHeight - 10 );
-        var gini = map(data[selectedCountry].gini,giniLowest,giniHighiest,0,width);
+        var hdi = int(map(data[selectedCountry].hdi,hdiLowest,hdiHighiest,0,windowHeight/2+100 ));
+        var gini = int(map(data[selectedCountry].gini,giniLowest,giniHighiest,0,width));
         var population = data[selectedCountry].population;
         
-        // Draw
+        /* ---- Drag the Flag ---- */
         fill(random(40,200),random(40,200),random(40,200));
-        rect(0,0,width,110);
+        rect(0,hdi,width/4,110);
         previousCountry = selectedCountry;
         
     }
     
-    // Stick
-    fill(255);
-    rect(0,0,-10,windowHeight);
+    /* ---- Drag the Flagpole ---- */
+    fill('#EEEEEE');
+    rect(0,0,10,windowHeight);
+
 }
 
-
+/* ---- Watch for rezing of the screen ---- */
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight/2+100);
+}
