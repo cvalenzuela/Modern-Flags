@@ -1,4 +1,4 @@
-var data, countryDescriptionTag, countryGiniTag, countryHdiTag, countryPopulationTag, countryName, selectedCountry, previousCountry,hdiLowest,hdiHighiest, giniLowest, giniHighiest, countryHdi, countryGini, countryPopulation, flagPoleY;
+var data, countryDescriptionTag, countryGiniTag, countryHdiTag, countryPopulationTag, countryName, selectedCountry, previousCountry,hdiLowest,hdiHighiest, giniLowest, giniHighiest, countryHdi, countryGini, countryPopulation, highiestPopulation, lowestPopulation, flagPoleY;
 
  /* ---- Look for selected country in ul>li or for Random Value in JSON ---- */
 if (document.addEventListener){
@@ -46,10 +46,12 @@ function setup(){
     countryPopulationTag = document.getElementById('population');
     
     /* ---- Setup threshold values for indexes  ---- */
-    hdiLowest = 0.246; // Worst: Niger
-    hdiHighiest = 0.893; // Best: Norway
+    hdiLowest = 0; // Worst: Niger = 0.246
+    hdiHighiest = 1; // Best: Norway = 0.893
     giniLowest = 24.8; // Best: Ukraine
     giniHighiest = 68; // Worst: Seychelles
+    highiestPopulation = 1376049; // China 
+    lowestPopulation = 1; // Tokelau
 }
 
 function draw() {
@@ -58,6 +60,7 @@ function draw() {
     if(selectedCountry != undefined && previousCountry != selectedCountry){
         
         /* ---- Remove previous country ---- */
+        background('#D2D7D3');
         countryName.remove();
         countryHdi.remove();
         countryGini.remove();
@@ -76,13 +79,14 @@ function draw() {
         countryPopulation.parent(countryPopulationTag);
 
         /* ---- Create new variables to draw  ---- */
-        var hdi = int(map(data[selectedCountry].hdi,hdiLowest,hdiHighiest,0,windowHeight/2+100 ));
+        var hdi = int(map(data[selectedCountry].hdi,hdiLowest,hdiHighiest,windowHeight/2+250,0));
         var gini = int(map(data[selectedCountry].gini,giniLowest,giniHighiest,0,width));
-        var population = data[selectedCountry].population;
+        var population = int(map(data[selectedCountry].population,lowestPopulation,highiestPopulation,150,450));
         
         /* ---- Drag the Flag ---- */
+        println(population);
         fill(random(40,200),random(40,200),random(40,200));
-        rect(0,hdi,width/4,110);
+        rect(0,hdi,population,population-population/3);
         previousCountry = selectedCountry;
         
     }
