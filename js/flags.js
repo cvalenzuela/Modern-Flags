@@ -1,12 +1,27 @@
+/*
+=====================
+Modern Flags: A index-based flag generator.
+A Tool to visualize Economic development indexes as a Flag Generator.
+By: Cristóbal Valenzuela while at @ NYU ITP
+cvalenzuela@nyu.edu
+cvalenzuelab.com
+October 2016
+
+Project for Data Visualization class: Phase 1 Project
+New York
+
+Tools used: p5.js, animated.css, bootstrap, FlatUI
+=====================
+*/
+
 var data, countryDescriptionTag, countryGiniTag, countryHdiTag, countryPopulationTag, countryName, selectedCountry, previousCountry,hdiLowest,hdiHighiest, giniLowest, giniHighiest, countryHdi, showCountryHdi, countryGini, countryPopulation, highiestPopulation, lowestPopulation, flagPoleY,startOfY,startOfX, canvasTag, hdiDescription, giniDescription, populationDescription;
 
  /* ---- Look for selected country in ul>li or for Random Value in JSON ---- */
 if (document.addEventListener){
-    document.addEventListener("click", function(event){
+    document.addEventListener("click", function(event){    
         if(event.target.nodeName == "A"){
             if(event.target.innerText != "Country"){
                 selectedCountry = event.target.innerText || event.srcElement.innerText;
-                console.log(selectedCountry);
             }
         }
         else if(event.target.innerText == "Random"){
@@ -21,6 +36,10 @@ if (document.addEventListener){
         }
     });
 }
+
+document.getElementById('listOfCountries').addEventListener('click', resetCanvas);
+    
+
 
 /* ---- Load Data ---- */
 function preload(){
@@ -59,10 +78,10 @@ function setup(){
     /* ---- Setup threshold values for indexes  ---- */
     hdiLowest = 0; // Worst: Niger = 0.246
     hdiHighiest = 1; // Best: Norway = 0.893
-    giniLowest = 24.8; // Best: Ukraine
-    giniHighiest = 68; // Worst: Seychelles
+    giniLowest = 23; // Best: Ukraine = 24.8
+    giniHighiest = 60; // Worst: Seychelles = 68
     highiestPopulation = 1376049; // China 
-    lowestPopulation = 1; // Tokelau
+    lowestPopulation = 2000; // Tokelau = 1
 }
 
 /* ---- Draw ---- */
@@ -81,6 +100,11 @@ function draw() {
         /* ---- Remove previous country ---- */
         resetCanvas();
         
+        /* ---- Hide all Hoverable Text ---- */
+        hdiDescription.hide();
+        giniDescription.hide();
+        populationDescription.hide();
+        
         /* ---- Create new country ---- */
         countryName = createElement('h6', selectedCountry); 
         countryHdi = createElement('p', '<b>HDI:</b> ' + data[selectedCountry].hdi);
@@ -97,18 +121,38 @@ function draw() {
         hdiDescription.parent(indexDescription);
         giniDescription.parent(indexDescription);
         populationDescription.parent(indexDescription);
+        hdiDescription.addClass('animated');
+        giniDescription.addClass('animated');
+        populationDescription.addClass('animated');
+        hdiDescription.addClass('leftInfoBox');
+        giniDescription.addClass('leftInfoBox');
+        populationDescription.addClass('leftInfoBox');
+
         
         /* ---- Create new variables to draw  ---- */
         var hdi = map(data[selectedCountry].hdi,hdiLowest,hdiHighiest,windowHeight/2+250,startOfY);
-        var gini = int(map(data[selectedCountry].gini,giniLowest,giniHighiest,0,width));
-        var population = int(map(data[selectedCountry].population,lowestPopulation,highiestPopulation,80,250));
+        var population = int(map(data[selectedCountry].population,lowestPopulation,highiestPopulation,70,250));
+        var gini = map(data[selectedCountry].gini,giniLowest,giniHighiest,0,population-population/3);
         
-        /* ---- Draw the Flag ---- */
+        /* ==== The Flag ==== */
+        /* ---- Draw Flag Container ---- */
         fill(random(40,200),random(40,200),random(40,200));
-        rect(startOfX,hdi,population,population-population/3); // Draw the flag
+        rect(startOfX,hdi,population,population-population/3);
+        
+        console.log(population);
+        console.log(population-population/3);
+        console.log(gini);
+        
+        /* ---- Draw Gini Inner Container ---- */
+        fill(255,0,0);
+        rect(startOfX,hdi,population,gini);
+        
+        /* ---- Draw Flag HDI Line ---- */
         stroke('#aaaaaa');
-        line(startOfX - 20,hdi,startOfX-5,hdi);  // Draw HDI Line
-        showCountryHdi.position(startOfX - 55,hdi-5); // Show HDI next to flag
+        line(startOfX - 20,hdi,startOfX-5,hdi);  
+        showCountryHdi.position(startOfX - 55,hdi-5); 
+        
+        /* ---- Save country to prevent redraw everytime ---- */
         previousCountry = selectedCountry;
         
     }
@@ -133,19 +177,15 @@ function resetCanvas(){
 
 /* ---- Show description when hover over them ---- */
 function showWhenHover(element){
-    element.addClass('leftInfoBox');
     element.removeClass('fadeOutLeft');
-    element.addClass('animated');
-    element.addClass('fadeInLeft');
-    element.show();    
+    element.addClass('fadeInLeft'); 
+    element.show();  
 }
 
 /* ---- Hide description when not hover over them ---- */
 function hideWhenNoHover(element){
-    element.removeClass('fadeInLeft');
     element.addClass('fadeOutLeft');
-    element.hide();
-    
+    element.removeClass('fadeInLeft');
 }
 
 /* ---- Cursor Styles---- */
