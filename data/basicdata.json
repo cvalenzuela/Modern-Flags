@@ -2,36 +2,43 @@
   "Norway": {
     "hdi": 0.944,
     "gini": 26.8,
-    "population": 5211
+    "population": 5211,
+    "co2": 9.19
   },
   "Australia": {
     "hdi": 0.935,
     "gini": 34,
-    "population": 8545
+    "population": 8545,
+    "co2": 16.51
   },
   "Switzerland": {
     "hdi": 0.93,
     "gini": 32.4,
-    "population": 8299
+    "population": 8299,
+    "co2": 4.62
   },
   "Denmark": {
     "hdi": 0.923,
     "gini": 26.9,
-    "population": 5669
+    "population": 5669,
+    "co2": 7.24
   },
   "China": {
     "hdi": 0.727,
     "gini": 37,
-    "population": 1376049
+    "population": 1376049,
+    "co2": 6.71
   },
   "Usa": {
     "hdi": 0.915,
     "gini": 41.1,
-    "population": 321774
+    "population": 321774,
+    "co2": 17.02
   },
   "Niger": {
     "hdi": 0.348,
     "gini": 31.2,
-    "population": 19899
+    "population": 19899,
+    "co2": 0.08
   }
 }

@@ -150,5 +150,12 @@ li>a{
 
 .howitworks {
     font-size: 8px;
+    padding: 0;
 
+}
+
+.howitworks>a{
+    font-size: 8px;
+    font-weight: 100;
+    text-decoration: none;
 }
