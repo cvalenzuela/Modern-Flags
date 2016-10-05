@@ -59,12 +59,11 @@ function setMenu(data){
     for(var index = 0; index < countriesInData.length; index++){
         var country = countriesInData[index];
         var createNewCountry = createElement('li', '<a href="#">'+country+'</a>');
-        //var href = createA('#', createNewCountry);
         createNewCountry.parent(document.getElementById('countryList'));
     }
 }
 
-/* ---- Setup ---- */
+/* ---- p5 Setup ---- */
 function setup(){
     canvas = createCanvas(windowWidth, windowHeight/2+100)
     canvas.parent('canvas');
@@ -105,18 +104,18 @@ function setup(){
     giniHighiest = 60; // Worst: Seychelles = 68
     highiestPopulation = 1376049; // China 
     lowestPopulation = 2000; // Tokelau = 1
-    co2Lowest = 0.021349926; // Burundi
-    co2Highiest = 44.01892637; // Qatar
+    co2Lowest = 0; // Burundi  = 0.021349926
+    co2Highiest = 25; // Qatar = 44.01892637
 }
 
-/* ---- Draw ---- */
+/* ---- p5 Draw ---- */
 function draw() {
 
     /* ---- Draw the Flagpole ---- */
     startOfX = windowWidth/2-50;
     noStroke();
     fill('#EEEEEE');
-    rect(startOfX,0,6,windowHeight); // Draw Flagpole
+    rect(startOfX,startOfY,6,windowHeight); // Draw Flagpole
     rect(startOfX-16,475,40,20);
     
     /* ---- Check if the country selected is valid---- */
@@ -166,22 +165,49 @@ function draw() {
         /* ---- Create new variables to draw with  ---- */
         var hdi = map(data[selectedCountry].hdi,hdiLowest,hdiHighiest,windowHeight/2+250,startOfY);
         var population = int(map(data[selectedCountry].population,lowestPopulation,highiestPopulation,70,250));
-        var gini = map(data[selectedCountry].gini,giniLowest,giniHighiest,0,population-population/3);
-        var co2 = map(data[selectedCountry].co2, co2Lowest, co2Highiest, 180,0);
+        var gini = int(map(data[selectedCountry].gini,giniLowest,giniHighiest,0,20));
+        var co2 = int(map(data[selectedCountry].co2, co2Lowest, co2Highiest, 255,0));
         
         /* ==== The Flag ==== */
         /* ---- Draw Flag Container ---- */
+        var flagWidth = population;
+        var flagHeight = population-population/3;
         fill(random(40,200),random(40,200),random(40,200));
-        rect(startOfX,hdi,population,population-population/3);
+        rect(startOfX,hdi,flagWidth,flagHeight);
                 
-        /* ---- Draw Gini Inner Container and use CO2 Emissions as color ---- */
-        fill(0,co2,0);
-        console.log(co2);
-        rect(startOfX,hdi,population,gini);
         
-        /* ---- Draw Flag HDI Line ---- */
+        /* ---- Draw Gini Inner Container and use CO2 Emissions as color ---- */
+        var division = int(flagHeight/gini);
+        for(var k = 0; k < gini; k++){
+            fill(random(co2),random(co2),random(co2));
+            rect(startOfX,hdi+division*k,population,division);
+        }
+            
+        /* ---- Create Triangle Shape for high CO2 countries ---- */
+        console.log(co2);
+        if(co2 < 180){
+            fill(random(0,60),random(0,60),random(0,60));
+            beginShape();
+            vertex(startOfX+5,hdi);
+            vertex(startOfX+5+flagWidth/3,hdi+flagHeight/2);
+            vertex(startOfX+5,hdi+flagHeight);
+            endShape(CLOSE);
+        }
+        
+        /* ---- Create 5 point star if country has a Good Gini ---- */
+        if(gini > 2 && gini < 4){
+            fill(random(100,co2),random(100,co2),random(100,co2));
+            fivePointStar(startOfX+random(30,50),hdi+10+random(0,20),5);
+        }
+        else if(gini <= 2){
+            fill(random(150,255),random(150,255),random(150,255));
+            fivePointStar(startOfX+random(20,30),hdi+15+random(0,20),5);
+            fivePointStar(startOfX+random(45,60),hdi+15+random(0,20),5);
+        }
+        
+        /* ---- Draw Flag HDI Lines ---- */
         stroke('#aaaaaa');
-        line(startOfX - 20,hdi,startOfX-5,hdi);  
+        line(startOfX - 20,hdi,startOfX-5,hdi);
         showCountryHdi.position(startOfX - 55,hdi-5); 
         
         /* ---- Save country to prevent redraw everytime ---- */
@@ -223,8 +249,34 @@ function hideWhenNoHover(element){
     element.removeClass('fadeInLeft');
 }
 
+/* ---- Hide descriptions when not hover over them ---- */
+function star(x, y, radius1, radius2, npoints,count) {
+  var angle = TWO_PI / npoints;
+  var halfAngle = angle/2.0;
+  beginShape();
+  for (count; count < TWO_PI; count += angle) {
+    var sx = x + cos(count) * radius2;
+    var sy = y + sin(count) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(count+halfAngle) * radius1;
+    sy = y + sin(count+halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
+
+/* ---- Five point star ---- */
+function fivePointStar(x,y,size){
+    star(x,y, size, size*2, 5, 0.95); 
+}
+
+/* ---- Ten point star ---- */
+function tenPointStar(){
+    star(random(20,width-20), random(20,height/2), 20, 10, 10, 0); 
+}
+
 /* ---- Cursor Styles---- */
-document.getElementById("hdi").style.cursor = "pointer";
-document.getElementById("gini").style.cursor = "pointer";
-document.getElementById("population").style.cursor = "pointer";
-document.getElementById("co2").style.cursor = "pointer";
+document.getElementById("hdi").style.cursor = "help";
+document.getElementById("gini").style.cursor = "help";
+document.getElementById("population").style.cursor = "help";
+document.getElementById("co2").style.cursor = "help";

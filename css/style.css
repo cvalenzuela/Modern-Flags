@@ -1,13 +1,13 @@
 :root{
-    --animationDurationOne:0s;  /*5*/
-    --animationDurationTwo:0s; /*3*/
-    --delayOne:0s; /*1*/
-    --delayTwo:0s; /*6*/
-    --delayThree:0s; /*8*/
-    --delayFour:0s; /*12*/
+    --animationDurationOne:5s;  /*5*/
+    --animationDurationTwo:3s; /*3*/
+    --delayOne:1s; /*1*/
+    --delayTwo:6s; /*6*/
+    --delayThree:8s; /*8*/
+    --delayFour:12s; /*12*/
 }
 
-body,h1,p{
+body,p{
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
@@ -20,7 +20,7 @@ a{
 }
 
 #home{
-    background-image: url("../img/worldmap.png");
+    background-color: #bdc3c7;
     background-size: contain;
 }
 
@@ -30,7 +30,7 @@ a{
 #title{
     text-align: center;
     position: relative;
-    top:20em;
+    top:18em;
     color: #34495e;
 }
 
@@ -51,8 +51,8 @@ p{
 
 .intro{    
     font-size: 0.9em;
-    color: #3498db;
-    margin-bottom: 20px;
+    color: #34495e;
+    margin-bottom: 10px;
     
 }
 
@@ -84,9 +84,7 @@ p{
 
 .copyright>p{
     font-family: 'Lora', serif;
-    
     text-align: right;
-
     font-size: 9px;
     font-weight: 300;
     color: #2c3e50;
@@ -117,7 +115,10 @@ p>span{
 }
 
 .indexTitle {
-    font-size: 30px;
+    font-family: 'Lora', serif;
+    color: #2c3e50;
+    font-size: 35px;
+    margin: 0;
 }
 
 li>a{
