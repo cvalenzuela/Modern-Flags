@@ -43,7 +43,25 @@ document.getElementById('listOfCountries').addEventListener('click', resetCanvas
 
 /* ---- Load Data ---- */
 function preload(){
-    data = loadJSON('../data/basicdata.json');
+    data = loadJSON('../data/dataForFlags.json', setMenu);
+}
+
+/* ---- Callback Function after Data is Load to Generate Menu ---- */
+function setMenu(data){
+    
+    var countriesInData = [];
+    for (var key in data) {
+        if (data.hasOwnProperty(key)){
+            countriesInData.push(key);
+        }
+    }
+    
+    for(var index = 0; index < countriesInData.length; index++){
+        var country = countriesInData[index];
+        var createNewCountry = createElement('li', '<a href="#">'+country+'</a>');
+        //var href = createA('#', createNewCountry);
+        createNewCountry.parent(document.getElementById('countryList'));
+    }
 }
 
 /* ---- Setup ---- */

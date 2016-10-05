@@ -1,0 +1,734 @@
+{
+  "Afghanistan": {
+    "gini": 28,
+    "hdi": 0.465,
+    "co2": 0.43,
+    "population": 32527
+  },
+  "Albania": {
+    "gini": 29,
+    "hdi": 0.733,
+    "co2": 1.61,
+    "population": 2897
+  },
+  "Angola": {
+    "gini": 43,
+    "hdi": 0.532,
+    "co2": 1.35,
+    "population": 25022
+  },
+  "Argentina": {
+    "gini": 44,
+    "hdi": 0.836,
+    "co2": 4.56,
+    "population": 43417
+  },
+  "Armenia": {
+    "gini": 30,
+    "hdi": 0.733,
+    "co2": 1.67,
+    "population": 3018
+  },
+  "Australia": {
+    "gini": 34,
+    "hdi": 0.935,
+    "co2": 16.52,
+    "population": 23969
+  },
+  "Austria": {
+    "gini": 30,
+    "hdi": 0.885,
+    "co2": 7.77,
+    "population": 8545
+  },
+  "Azerbaijan": {
+    "gini": 33,
+    "hdi": 0.751,
+    "co2": 3.65,
+    "population": 9754
+  },
+  "Bangladesh": {
+    "gini": 32,
+    "hdi": 0.57,
+    "co2": 0.37,
+    "population": 160996
+  },
+  "Belarus": {
+    "gini": 26,
+    "hdi": 0.798,
+    "co2": 6.68,
+    "population": 9496
+  },
+  "Belgium": {
+    "gini": 33,
+    "hdi": 0.89,
+    "co2": 8.85,
+    "population": 11299
+  },
+  "Benin": {
+    "gini": 44,
+    "hdi": 0.48,
+    "co2": 0.51,
+    "population": 10880
+  },
+  "Bhutan": {
+    "gini": 39,
+    "hdi": 0.605,
+    "co2": 0.77,
+    "population": 775
+  },
+  "Bosnia and Herzegovina": {
+    "gini": 33,
+    "hdi": 0.733,
+    "co2": 6.2,
+    "population": 3810
+  },
+  "Botswana": {
+    "gini": 60,
+    "hdi": 0.698,
+    "co2": 2.32,
+    "population": 2262
+  },
+  "Brazil": {
+    "gini": 53,
+    "hdi": 0.755,
+    "co2": 2.19,
+    "population": 207848
+  },
+  "Bulgaria": {
+    "gini": 34,
+    "hdi": 0.782,
+    "co2": 6.71,
+    "population": 7150
+  },
+  "Burkina Faso": {
+    "gini": 40,
+    "hdi": 0.402,
+    "co2": 0.12,
+    "population": 18106
+  },
+  "Burundi": {
+    "gini": 33,
+    "hdi": 0.4,
+    "co2": 0.02,
+    "population": 11179
+  },
+  "Cambodia": {
+    "gini": 32,
+    "hdi": 0.555,
+    "co2": 0.31,
+    "population": 15578
+  },
+  "Cameroon": {
+    "gini": 41,
+    "hdi": 0.512,
+    "co2": 0.27,
+    "population": 23344
+  },
+  "Canada": {
+    "gini": 34,
+    "hdi": 0.913,
+    "co2": 14.14,
+    "population": 35940
+  },
+  "Central African Republic": {
+    "gini": 56,
+    "hdi": 0.35,
+    "co2": 0.06,
+    "population": 4900
+  },
+  "Chad": {
+    "gini": 43,
+    "hdi": 0.392,
+    "co2": 0.04,
+    "population": 14037
+  },
+  "Chile": {
+    "gini": 51,
+    "hdi": 0.832,
+    "co2": 4.62,
+    "population": 17948
+  },
+  "China": {
+    "gini": 37,
+    "hdi": 0.727,
+    "co2": 6.71,
+    "population": 1376049
+  },
+  "Colombia": {
+    "gini": 54,
+    "hdi": 0.72,
+    "co2": 1.56,
+    "population": 48229
+  },
+  "Comoros": {
+    "gini": 64,
+    "hdi": 0.503,
+    "co2": 0.22,
+    "population": 788
+  },
+  "Costa Rica": {
+    "gini": 49,
+    "hdi": 0.766,
+    "co2": 1.7,
+    "population": 4808
+  },
+  "Croatia": {
+    "gini": 34,
+    "hdi": 0.818,
+    "co2": 4.8,
+    "population": 4240
+  },
+  "Czech Republic": {
+    "gini": 26,
+    "hdi": 0.87,
+    "co2": 10.43,
+    "population": 10543
+  },
+  "Denmark": {
+    "gini": 27,
+    "hdi": 0.923,
+    "co2": 7.25,
+    "population": 5669
+  },
+  "Djibouti": {
+    "gini": 40,
+    "hdi": 0.47,
+    "co2": 0.56,
+    "population": 888
+  },
+  "Dominican Republic": {
+    "gini": 46,
+    "hdi": 0.715,
+    "co2": 2.18,
+    "population": 10528
+  },
+  "Ecuador": {
+    "gini": 47,
+    "hdi": 0.732,
+    "co2": 2.35,
+    "population": 16144
+  },
+  "El Salvador": {
+    "gini": 42,
+    "hdi": 0.666,
+    "co2": 1.1,
+    "population": 6127
+  },
+  "Estonia": {
+    "gini": 33,
+    "hdi": 0.861,
+    "co2": 14.05,
+    "population": 1313
+  },
+  "Ethiopia": {
+    "gini": 34,
+    "hdi": 0.442,
+    "co2": 0.08,
+    "population": 99391
+  },
+  "Fiji": {
+    "gini": 43,
+    "hdi": 0.727,
+    "co2": 1.42,
+    "population": 892
+  },
+  "Finland": {
+    "gini": 28,
+    "hdi": 0.883,
+    "co2": 10.16,
+    "population": 5503
+  },
+  "France": {
+    "gini": 32,
+    "hdi": 0.888,
+    "co2": 5.19,
+    "population": 64395
+  },
+  "Gabon": {
+    "gini": 42,
+    "hdi": 0.684,
+    "co2": 1.42,
+    "population": 1725
+  },
+  "Georgia": {
+    "gini": 41,
+    "hdi": 0.754,
+    "co2": 1.77,
+    "population": 4000
+  },
+  "Germany": {
+    "gini": 31,
+    "hdi": 0.916,
+    "co2": 8.92,
+    "population": 80689
+  },
+  "Ghana": {
+    "gini": 43,
+    "hdi": 0.579,
+    "co2": 0.4,
+    "population": 27410
+  },
+  "Greece": {
+    "gini": 35,
+    "hdi": 0.865,
+    "co2": 7.56,
+    "population": 10955
+  },
+  "Guatemala": {
+    "gini": 52,
+    "hdi": 0.627,
+    "co2": 0.75,
+    "population": 16343
+  },
+  "Guinea": {
+    "gini": 34,
+    "hdi": 0.411,
+    "co2": 0.23,
+    "population": 12609
+  },
+  "Guinea-Bissau": {
+    "gini": 36,
+    "hdi": 0.42,
+    "co2": 0.15,
+    "population": 1844
+  },
+  "Haiti": {
+    "gini": 59,
+    "hdi": 0.483,
+    "co2": 0.22,
+    "population": 10711
+  },
+  "Honduras": {
+    "gini": 57,
+    "hdi": 0.606,
+    "co2": 1.1,
+    "population": 8075
+  },
+  "Hungary": {
+    "gini": 29,
+    "hdi": 0.828,
+    "co2": 4.86,
+    "population": 9855
+  },
+  "Iceland": {
+    "gini": 26,
+    "hdi": 0.899,
+    "co2": 5.9,
+    "population": 329
+  },
+  "India": {
+    "gini": 34,
+    "hdi": 0.609,
+    "co2": 1.66,
+    "population": 1311051
+  },
+  "Indonesia": {
+    "gini": 38,
+    "hdi": 0.684,
+    "co2": 2.3,
+    "population": 257564
+  },
+  "Iraq": {
+    "gini": 30,
+    "hdi": 0.654,
+    "co2": 4.2,
+    "population": 36423
+  },
+  "Ireland": {
+    "gini": 32,
+    "hdi": 0.916,
+    "co2": 7.88,
+    "population": 4688
+  },
+  "Israel": {
+    "gini": 43,
+    "hdi": 0.894,
+    "co2": 8.95,
+    "population": 8064
+  },
+  "Italy": {
+    "gini": 36,
+    "hdi": 0.873,
+    "co2": 6.7,
+    "population": 59798
+  },
+  "Jamaica": {
+    "gini": 46,
+    "hdi": 0.719,
+    "co2": 2.87,
+    "population": 2793
+  },
+  "Japan": {
+    "gini": 32,
+    "hdi": 0.891,
+    "co2": 9.29,
+    "population": 126573
+  },
+  "Jordan": {
+    "gini": 34,
+    "hdi": 0.748,
+    "co2": 3.6,
+    "population": 7595
+  },
+  "Kazakhstan": {
+    "gini": 29,
+    "hdi": 0.788,
+    "co2": 15.81,
+    "population": 17625
+  },
+  "Kenya": {
+    "gini": 48,
+    "hdi": 0.548,
+    "co2": 0.33,
+    "population": 46050
+  },
+  "Latvia": {
+    "gini": 36,
+    "hdi": 0.819,
+    "co2": 3.79,
+    "population": 1971
+  },
+  "Lesotho": {
+    "gini": 54,
+    "hdi": 0.497,
+    "co2": 1.08,
+    "population": 2135
+  },
+  "Liberia": {
+    "gini": 38,
+    "hdi": 0.43,
+    "co2": 0.22,
+    "population": 4503
+  },
+  "Lithuania": {
+    "gini": 33,
+    "hdi": 0.839,
+    "co2": 4.54,
+    "population": 2878
+  },
+  "Madagascar": {
+    "gini": 41,
+    "hdi": 0.51,
+    "co2": 0.11,
+    "population": 24235
+  },
+  "Malawi": {
+    "gini": 46,
+    "hdi": 0.445,
+    "co2": 0.08,
+    "population": 17215
+  },
+  "Malaysia": {
+    "gini": 46,
+    "hdi": 0.779,
+    "co2": 7.9,
+    "population": 30331
+  },
+  "Maldives": {
+    "gini": 37,
+    "hdi": 0.706,
+    "co2": 2.93,
+    "population": 364
+  },
+  "Mali": {
+    "gini": 33,
+    "hdi": 0.419,
+    "co2": 0.08,
+    "population": 17600
+  },
+  "Mauritania": {
+    "gini": 40,
+    "hdi": 0.506,
+    "co2": 0.63,
+    "population": 4068
+  },
+  "Mauritius": {
+    "gini": 36,
+    "hdi": 0.777,
+    "co2": 3.13,
+    "population": 1273
+  },
+  "Mexico": {
+    "gini": 48,
+    "hdi": 0.756,
+    "co2": 3.88,
+    "population": 127017
+  },
+  "Mongolia": {
+    "gini": 37,
+    "hdi": 0.727,
+    "co2": 6.92,
+    "population": 2959
+  },
+  "Montenegro": {
+    "gini": 31,
+    "hdi": 0.802,
+    "co2": 4.15,
+    "population": 626
+  },
+  "Morocco": {
+    "gini": 41,
+    "hdi": 0.628,
+    "co2": 1.74,
+    "population": 34378
+  },
+  "Mozambique": {
+    "gini": 46,
+    "hdi": 0.416,
+    "co2": 0.13,
+    "population": 27978
+  },
+  "Namibia": {
+    "gini": 61,
+    "hdi": 0.628,
+    "co2": 1.24,
+    "population": 2459
+  },
+  "Nepal": {
+    "gini": 33,
+    "hdi": 0.548,
+    "co2": 0.16,
+    "population": 28514
+  },
+  "Netherlands": {
+    "gini": 29,
+    "hdi": 0.922,
+    "co2": 10.06,
+    "population": 16925
+  },
+  "Nicaragua": {
+    "gini": 46,
+    "hdi": 0.631,
+    "co2": 0.84,
+    "population": 6082
+  },
+  "Niger": {
+    "gini": 31,
+    "hdi": 0.348,
+    "co2": 0.08,
+    "population": 19899
+  },
+  "Nigeria": {
+    "gini": 43,
+    "hdi": 0.514,
+    "co2": 0.54,
+    "population": 182202
+  },
+  "Norway": {
+    "gini": 27,
+    "hdi": 0.944,
+    "co2": 9.19,
+    "population": 5211
+  },
+  "Pakistan": {
+    "gini": 30,
+    "hdi": 0.538,
+    "co2": 0.94,
+    "population": 188925
+  },
+  "Panama": {
+    "gini": 52,
+    "hdi": 0.78,
+    "co2": 2.63,
+    "population": 3929
+  },
+  "Paraguay": {
+    "gini": 48,
+    "hdi": 0.679,
+    "co2": 0.84,
+    "population": 6639
+  },
+  "Peru": {
+    "gini": 45,
+    "hdi": 0.734,
+    "co2": 1.78,
+    "population": 31377
+  },
+  "Philippines": {
+    "gini": 43,
+    "hdi": 0.668,
+    "co2": 0.87,
+    "population": 100699
+  },
+  "Poland": {
+    "gini": 33,
+    "hdi": 0.843,
+    "co2": 8.34,
+    "population": 38612
+  },
+  "Romania": {
+    "gini": 27,
+    "hdi": 0.793,
+    "co2": 4.21,
+    "population": 19511
+  },
+  "Russian Federation": {
+    "gini": 40,
+    "hdi": 0.798,
+    "co2": 12.65,
+    "population": 143457
+  },
+  "Rwanda": {
+    "gini": 51,
+    "hdi": 0.483,
+    "co2": 0.06,
+    "population": 11610
+  },
+  "Sao Tome and Principe": {
+    "gini": 34,
+    "hdi": 0.555,
+    "co2": 0.59,
+    "population": 190
+  },
+  "Senegal": {
+    "gini": 40,
+    "hdi": 0.466,
+    "co2": 0.59,
+    "population": 15129
+  },
+  "Serbia": {
+    "gini": 30,
+    "hdi": 0.771,
+    "co2": 6.8,
+    "population": 8851
+  },
+  "Seychelles": {
+    "gini": 66,
+    "hdi": 0.772,
+    "co2": 6.84,
+    "population": 96
+  },
+  "Sierra Leone": {
+    "gini": 35,
+    "hdi": 0.413,
+    "co2": 0.15,
+    "population": 6453
+  },
+  "Slovenia": {
+    "gini": 25,
+    "hdi": 0.88,
+    "co2": 7.5,
+    "population": 2068
+  },
+  "South Africa": {
+    "gini": 65,
+    "hdi": 0.666,
+    "co2": 9.26,
+    "population": 54490
+  },
+  "Spain": {
+    "gini": 36,
+    "hdi": 0.876,
+    "co2": 5.79,
+    "population": 46122
+  },
+  "Sri Lanka": {
+    "gini": 36,
+    "hdi": 0.757,
+    "co2": 0.73,
+    "population": 20715
+  },
+  "Sudan": {
+    "gini": 35,
+    "hdi": 0.479,
+    "co2": 0.35,
+    "population": 40235
+  },
+  "Swaziland": {
+    "gini": 51,
+    "hdi": 0.531,
+    "co2": 0.86,
+    "population": 1287
+  },
+  "Sweden": {
+    "gini": 26,
+    "hdi": 0.907,
+    "co2": 5.52,
+    "population": 9779
+  },
+  "Switzerland": {
+    "gini": 32,
+    "hdi": 0.93,
+    "co2": 4.63,
+    "population": 8299
+  },
+  "Syrian Arab Republic": {
+    "gini": 36,
+    "hdi": 0.594,
+    "co2": 2.74,
+    "population": 18502
+  },
+  "Tajikistan": {
+    "gini": 31,
+    "hdi": 0.624,
+    "co2": 0.36,
+    "population": 8482
+  },
+  "Thailand": {
+    "gini": 39,
+    "hdi": 0.726,
+    "co2": 4.53,
+    "population": 67959
+  },
+  "Timor-Leste": {
+    "gini": 30,
+    "hdi": 0.595,
+    "co2": 0.16,
+    "population": 1185
+  },
+  "Togo": {
+    "gini": 46,
+    "hdi": 0.484,
+    "co2": 0.32,
+    "population": 7305
+  },
+  "Tunisia": {
+    "gini": 36,
+    "hdi": 0.721,
+    "co2": 2.4,
+    "population": 11254
+  },
+  "Turkey": {
+    "gini": 40,
+    "hdi": 0.761,
+    "co2": 4.38,
+    "population": 78666
+  },
+  "Uganda": {
+    "gini": 45,
+    "hdi": 0.483,
+    "co2": 0.11,
+    "population": 39032
+  },
+  "Ukraine": {
+    "gini": 25,
+    "hdi": 0.747,
+    "co2": 6.26,
+    "population": 44824
+  },
+  "United Kingdom": {
+    "gini": 38,
+    "hdi": 0.907,
+    "co2": 7.09,
+    "population": 64716
+  },
+  "Uruguay": {
+    "gini": 41,
+    "hdi": 0.793,
+    "co2": 2.3,
+    "population": 3432
+  },
+  "Uzbekistan": {
+    "gini": 35,
+    "hdi": 0.675,
+    "co2": 3.91,
+    "population": 29893
+  },
+  "Zambia": {
+    "gini": 57,
+    "hdi": 0.586,
+    "co2": 0.21,
+    "population": 16212
+  }
+}
