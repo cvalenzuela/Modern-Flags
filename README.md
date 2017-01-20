@@ -1,7 +1,18 @@
 # Modern Flags
-Data Visualization - Flags for the XXI Century
 
-Live Version Here: http://modernflags.3laab.com/
+Flags for the XXI Century
 
-Phase 1 Project for Data Visualization Class
+# Modern Flags
 
+A data visualization of economic and environmental data by generating flag patterns.
+
+## Live
+
+[Modern Flags](http://modernflags.cvalenzuelab.com/)
+
+## Data
+
+- UN Data [Available here.](http://data.un.org/)
+
+## License
+MIT
