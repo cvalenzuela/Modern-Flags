@@ -2,7 +2,7 @@
 
 Flags for the XXI Century
 
-# Modern Flags
+## Description
 
 A data visualization of economic and environmental data by generating flag patterns.
 
